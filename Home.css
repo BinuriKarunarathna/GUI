@@ -1,0 +1,38 @@
+.navbar
+{
+    background-color: #000000;
+    font-size: 20px;
+    font-weight: bold;    
+    height:80px;
+   
+}
+.navbar li
+{
+    display: inline-block;
+    padding-top: 25px;
+    
+}
+.navbar li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 150px;
+}
+/* .shop li a
+{
+    margin-top: 100px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+
+}
+.shop a:hover .shop li a
+{
+    display: block;
+    position: absolute;
+    background-color: #000000;
+    margin-top: 80px;
+    margin-left: 0px;
+    width: 100%;
+    z-index: 1;
+} */
