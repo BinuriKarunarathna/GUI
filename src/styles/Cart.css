@@ -1,0 +1,131 @@
+.cart-container {
+    display: flex;
+    flex-direction: row; /* Ensures summary section moves to the right */
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    padding: 24px;
+  }
+  
+  .shopping-bag {
+    flex: 2; /* Takes more space */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+  }
+  .cart-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .cart-items {
+    color: #6b7280;
+    margin-bottom: 24px;
+  }
+  
+  .cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .item-info {
+    margin-left: 16px;
+  }
+  
+  .item-name {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .item-description {
+    color: #6b7280;
+  }
+  
+  .item-price {
+    text-align: center;
+  }
+  
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .quantity-btn {
+    padding: 6px 12px;
+    border: 1px solid #d1d5db;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    margin: 0 12px;
+  }
+  
+  .total-price {
+    color: #ea580c;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .summary-section {
+    flex: 1; /* Takes less space */
+    margin-left: 24px; /* Creates spacing between cart and summary */
+  }
+  
+  .summary-box {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+  }
+  
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .apply-btn {
+    width: 100%;
+    background: #ea580c;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+  

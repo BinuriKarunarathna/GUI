@@ -12,7 +12,7 @@ const About = () => {
       {/* Homepage */}
       <div className="flex flex-col items-center">
         <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md">
-          Homepage
+        <a href='/'>Home Page</a>
         </div>
 
         {/* Level 1 */}
@@ -20,15 +20,18 @@ const About = () => {
           {/* Node 1.0 */}
           <div className="flex flex-col items-center">
             <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-              <a href='#r'>Page Title</a>
+              <a href='/Shop'>Shop</a>
             </div>
             {/* Level 2 */}
             <div className="flex flex-col mt-6 space-y-6">
               <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-                <a href='#r'>Page Title</a>
+                <a href='/Badminton'>Badminton</a>
               </div>
               <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-              <a href='#r'>Page Title</a>
+              <a href='/Cricket'>Cricket</a>
+              </div>
+              <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
+              <a href='/FootBall'>Foot Ball</a>
               </div>
             </div>
           </div>
@@ -36,43 +39,37 @@ const About = () => {
           {/* Node 2.0 */}
           <div className="flex flex-col items-center">
             <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-            <a href='#r'>Page Title</a>
+            <a href='/Brands'>Brands</a>
             </div>
           </div>
 
           {/* Node 3.0 */}
           <div className="flex flex-col items-center">
             <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-            <a href='#r'>Page Title</a>
+            <a href='/About'>About</a>
             </div>
           </div>
 
           {/* Node 4.0 */}
           <div className="flex flex-col items-center">
             <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-            <a href='#r'>Page Title</a>
-            </div>
-            {/* Level 2 */}
-            <div className="flex flex-col mt-6 space-y-6">
-              <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-              <a href='#r'>Page Title</a>
-              </div>
+            <a href='/cart'>Cart</a>
             </div>
           </div>
 
-          {/* Node 5.0 */}
+          
           <div className="flex flex-col items-center">
             <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
-            <a href='#r'>Page Title</a>
+            <a href='/Query'>Contact</a>
             </div>
           </div>
 
           {/* Node 6.0 */}
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <div className="bg-white text-gray-800 py-3 px-6 rounded-lg shadow-md">
             <a href='#r'>Page Title</a>
             </div>
-          </div>
+          </div> */} 
         </div>
       </div>
     </div>

@@ -62,7 +62,7 @@ const FeedbackForm = () => {
   return (
     <div>
         <NavBar/>
-    <div class="query-container">        
+    <div className="query-container">        
       <form className="form" id="Form" method="post" action="mailto:binuri.20221514@iit.ac.lk">
         <label htmlFor="fullName">Full Name:</label>
         <br /><br />
@@ -116,3 +116,4 @@ const FeedbackForm = () => {
 };
 
 export default FeedbackForm;
+//mongodb+srv://Yasara:<db_password>@atlascluster.pr425nk.mongodb.net/

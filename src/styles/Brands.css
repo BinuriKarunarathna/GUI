@@ -6,16 +6,50 @@
   }
   
   .category-card {
-    background-image: url('../assets/Background.jpeg'); /* Add your background image */
-    background-color: #fff;
+    
+    background-color: rgb(194, 222, 231);
     border-radius: 10px;
     overflow: hidden;
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     text-align: center;
-    width: 200px;
-    height: 350px;
+    width: 300px;
+    height: 430px;
+  }
+  #nike
+  {
+    width: 300px;
+    height: 200px;
+    background-image: url("../assets/nike.jpeg");
+    background-repeat:no-repeat;
+    /* background-size: cover; */
+    background-position: top;
+  }
+  #puma
+  {
+    width: 300px;
+    height: 200px;
+    background-image: url("../assets/puma.png");
+    background-repeat:no-repeat;
+    background-position: top;
+  }
+  #adidas
+  {
+    width: 300px;
+    height: 180px;
+    background-image: url("../assets/adidas.png");
+    background-repeat:no-repeat;
+    background-position: top;
+  }
+  #reebok
+  {
+    width: 300px;
+    height: 180px;
+    background-image: url("../assets/reebok.png");
+    background-repeat:no-repeat;
+    /* background-size: cover; */
+   background-position: top;
   }
   
   .category-card:hover {
@@ -29,8 +63,21 @@
   }
   
   .category-title {
+    padding: 10px;
+    text-align : left;
     font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0;
+  }
+  @media (max-width: 768px) {
+    .categories {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .category-card {
+      width: 90%; /* Full width on smaller screens */
+    }
   }
   

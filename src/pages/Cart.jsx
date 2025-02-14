@@ -1,105 +1,112 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
+import {React,useEffect,useState} from 'react';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
+import '../styles/Cart.css';
+import axios from 'axios';
 
 const Cart = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    const endpoint = "http://localhost:5000/cart";
+    axios.get(endpoint)
+      .then((response) => setCartItems(response.data))
+      .catch((error) => console.error("Error fetching cart data:", error));
+  }, []);
+
   return (
     <div>
-      <NavBar/>
-    <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen p-6">
-      {/* Shopping Bag Section */}
-      <div className="flex-1 bg-white rounded-lg shadow-md p-6">
-        <h1 className="text-xl font-bold mb-4">Shopping Bag</h1>
-        <p className="text-gray-600 mb-6">2 items in your bag.</p>
+      <NavBar />
+      <div className="cart-container">
+        {/* Shopping Bag Section */}
+        <div className="shopping-bag">
+          <h1 className="cart-title">Shopping Bag</h1>
+          <p className="cart-items">{cartItems.length} items in your bag.</p>
 
-        {/* Cart Items */}
-        <div className="space-y-6">
-          {/* Item 1 */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <img
-                src="https://via.placeholder.com/80"
-                alt="Product"
-                className="w-20 h-20 object-cover rounded-lg"
-              />
-              <div className="ml-4">
-                <h2 className="text-lg font-medium">Floral Print Wrap Dress</h2>
-                <p className="text-gray-600">Color: Blue</p>
-                <p className="text-gray-600">Size: 42</p>
+          {/* Cart Items */}
+          <div className="cart-items-list">
+          {cartItems.map((item) => (
+              <div className="cart-item" key={item.id}>
+                <div className="item-details">
+                  <img src={item.image_url} alt={item.product_name} class="item-image" />
+                  <div className="item-info">
+                    <h2 className="item-name">{item.product_name}</h2>
+                    <p className="item-description">Color: {item.color}</p>
+                    <p className="item-description">Size: {item.size}</p>
+                  </div>
+                </div>
+                <div className="item-price">
+                  <p className="price">${item.price.toFixed(2)}</p>
+                  <div className="quantity-controls">
+                    <button className="quantity-btn">-</button>
+                    <span className="quantity">{item.quantity}</span>
+                    <button className="quantity-btn">+</button>
+                  </div>
+                </div>
+                <p className="total-price">${(item.price * item.quantity).toFixed(2)}</p>
               </div>
-            </div>
-            <div className="text-center">
-              <p className="text-lg font-semibold">$20.50</p>
-              <div className="flex items-center mt-2">
-                <button className="px-3 py-1 border rounded">-</button>
-                <span className="px-4">2</span>
-                <button className="px-3 py-1 border rounded">+</button>
+            ))}
+            {/* Item 1 */}
+            {/* <div className="cart-item">
+              <div className="item-details">
+                <img src="https://via.placeholder.com/80" alt="Product" className="item-image" />
+                <div className="item-info">
+                  <h2 className="item-name">{cartItems.product_name}</h2>
+                  <p className="item-description">Color: Blue</p>
+                  <p className="item-description">Size: 42</p>
+                </div>
               </div>
-            </div>
-            <p className="text-orange-500 text-lg font-semibold">$41.00</p>
+              <div className="item-price">
+                <p className="price">$20.50</p>
+                <div className="quantity-controls">
+                  <button className="quantity-btn">-</button>
+                  <span className="quantity">2</span>
+                  <button className="quantity-btn">+</button>
+                </div>
+              </div>
+              <p className="total-price">$41.00</p>
+            </div> */}
+
+            {/* Item 2 */}
+            {/* <div className="cart-item">
+              <div className="item-details">
+                <img src="https://via.placeholder.com/80" alt="Product" className="item-image" />
+                <div className="item-info">
+                  <h2 className="item-name">Floral Print Wrap Dress</h2>
+                  <p className="item-description">Color: Blue</p>
+                  <p className="item-description">Size: 42</p>
+                </div>
+              </div>
+              <div className="item-price">
+                <p className="price">$30.50</p>
+                <div className="quantity-controls">
+                  <button className="quantity-btn">-</button>
+                  <span className="quantity">1</span>
+                  <button className="quantity-btn">+</button>
+                </div>
+              </div>
+              <p className="total-price">$30.50</p>
+            </div> */}
           </div>
+        </div>
 
-          {/* Item 2 */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <img
-                src="https://via.placeholder.com/80"
-                alt="Product"
-                className="w-20 h-20 object-cover rounded-lg"
-              />
-              <div className="ml-4">
-                <h2 className="text-lg font-medium">Floral Print Wrap Dress</h2>
-                <p className="text-gray-600">Color: Blue</p>
-                <p className="text-gray-600">Size: 42</p>
-              </div>
+        {/* Summary Section */}
+        <div className="summary-section">
+          <div className="summary-box">
+            <div className="summary-details">
+              <p className="summary-item"><span>Cart Subtotal</span> <span>$71.50</span></p>
+              <p className="summary-item"><span>Design by Fluttertop</span> <span>Free</span></p>
+              <p className="summary-item"><span>Discount</span> <span>-$4.00</span></p>
+              <hr />
+              <p className="summary-total"><span>Cart Total</span> <span>$67.50</span></p>
+              <button className="apply-btn">Apply</button>
             </div>
-            <div className="text-center">
-              <p className="text-lg font-semibold">$30.50</p>
-              <div className="flex items-center mt-2">
-                <button className="px-3 py-1 border rounded">-</button>
-                <span className="px-4">1</span>
-                <button className="px-3 py-1 border rounded">+</button>
-              </div>
-            </div>
-            <p className="text-orange-500 text-lg font-semibold">$30.50</p>
           </div>
         </div>
       </div>
-
-      {/* Summary Section */}
-      <div className="w-full md:w-1/3 mt-6 md:mt-0 md:ml-6">
-        <div className="bg-white rounded-lg shadow-md p-6">
-
-          {/* Cart Total */}
-          <div className="mt-6 bg-yellow-100 p-4 rounded-lg">
-            <p className="flex justify-between">
-              <span>Cart Subtotal</span>
-              <span>$71.50</span>
-            </p>
-            <p className="flex justify-between">
-              <span>Design by Fluttertop</span>
-              <span>Free</span>
-            </p>
-            <p className="flex justify-between">
-              <span>Discount</span>
-              <span>-$4.00</span>
-            </p>
-            <hr className="my-2" />
-            <p className="flex justify-between font-bold">
-              <span>Cart Total</span>
-              <span>$67.50</span>
-            </p>
-            <button className="w-full bg-orange-500 text-white py-2 rounded mt-4">
-              Apply
-            </button>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
- 
-      <Footer/>
-    </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

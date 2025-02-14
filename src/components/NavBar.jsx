@@ -7,11 +7,11 @@ const NavBar = () => {
     <div class="navbar">
         <ul>
             <li><a href="/" class="navItem">Home</a></li>
-            <li><a href="Shop.html" class="navItem">Shop</a>
+            <li><a class="navItem">Shop</a>
                 <ul class="dropdown-content">
-                    <li><a href="#file:///E:/University%20of%20Ruhuna/3rd%20Sem/GUI%20Programming/guiProject/Home.html" class="subItem">Web Development</a></li>
-                    <li><a href="#file:///E:/University%20of%20Ruhuna/3rd%20Sem/GUI%20Programming/guiProject/Home.html" class="subItem">App Development</a></li>
-                    <li><a href="#file:///E:/University%20of%20Ruhuna/3rd%20Sem/GUI%20Programming/guiProject/Home.html" class="subItem">Graphic Design</a></li>
+                    <li><a href="/Badminton" class="subItem">Badminton</a></li>
+                    <li><a href="/Cricket" class="subItem">Cricket</a></li>
+                    <li><a href="/FootBall" class="subItem">FootBall</a></li>
                 </ul>
             </li>
             <li> <a href="/Brands" class="navItem">Brands</a></li>
