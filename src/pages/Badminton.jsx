@@ -1,26 +1,17 @@
 // App.js
 import React, { useState,useEffect } from 'react';
 import '../styles/Badminton.css';
-import racketImage from '../assets/racket1.jpeg';
-import shuttlecockImage from '../assets/shuttlecock.jpg';
-import shoesImage from '../assets/shoes.jpeg';
-import gripImage from '../assets/grip.jpeg';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import axios from "axios";
 
 function Badminton() {
-  const [cart, setCart] = useState([]);
-  let items = [
-    { id: 1, name: 'Badminton Racket', price: 50, image: racketImage },
-    { id: 2, name: 'Shuttlecock Pack', price: 15, image: shuttlecockImage },
-    { id: 3, name: 'Sports Shoes', price: 75, image: shoesImage },
-    { id: 4, name: 'Grip Tape', price: 10, image: gripImage },
-  ];
-  const setData = (data) => {
-    items = data;
-    console.log(data);
-  }
+  // const [cart, setCart] = useState([]);
+  const [items, setItems] = useState([]);
+  // const setData = (data) => {
+  //   items = data;
+  //   console.log(data);
+  // }
   useEffect(() => {
     const endpoint = "http://localhost:5000/items?type_of_sport=badminton";
     console.log("Fetching data from: ", endpoint);
@@ -28,7 +19,7 @@ function Badminton() {
       .get(endpoint)
       .then((response) => {
         console.log("network response", response);
-        setData(response.data); // Update state with fetched data
+        setItems(response.data); // Update state with fetched data
         // setLoading(false);
       })
       .catch((error) => {
@@ -38,9 +29,23 @@ function Badminton() {
       });
   }, []);
 
-  const addToCart = (item) => {
-    setCart([...cart, item]);
+  const addToCart = async (item) => {
+    try {
+      const response = await axios.post("http://localhost:5000/cart", {
+        product_name: item.name,
+        price: item.price,
+        quantity: 1, // Default to 1, update later if needed
+        image_url: item.image_url,
+      });
+
+      console.log("Item added to cart:", response.data);
+      alert(`${item.name} added to cart!`);
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+      alert("Failed to add item to cart.");
+    }
   };
+
 
   return (
     <>
@@ -56,7 +61,7 @@ function Badminton() {
         <section className="items">
           {items.map((item) => (
             <div key={item.id} className="item-card">
-              <img src={item.image} alt={item.name} className="item-image" />
+              <img src={item.image_url} alt={item.name} className="item-image" />
               <h2>{item.name}</h2>
               <p>Price: ${item.price}</p>
               <button onClick={() => addToCart(item)}>Add to Cart</button>

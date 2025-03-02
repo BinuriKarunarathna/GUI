@@ -9,10 +9,32 @@ const Cart = () => {
 
   useEffect(() => {
     const endpoint = "http://localhost:5000/cart";
-    axios.get(endpoint)
+    axios
+      .get(endpoint)
       .then((response) => setCartItems(response.data))
       .catch((error) => console.error("Error fetching cart data:", error));
   }, []);
+  
+  const updateCart = (itemId, newQuantity) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === itemId ? { ...item, quantity: newQuantity } : item
+      )
+    );
+
+    // Update in database
+    axios
+      .put(`http://localhost:5000/cart/${itemId}`, { quantity: newQuantity })
+      .catch((error) => console.error("Error updating quantity:", error));
+  };
+  const removeFromCart = (itemId) => {
+    axios
+      .delete(`http://localhost:5000/cart/${itemId}`)
+      .then(() => {
+        setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+      })
+      .catch((error) => console.error("Error removing item:", error));
+  };
 
   return (
     <div>
@@ -31,19 +53,22 @@ const Cart = () => {
                   <img src={item.image_url} alt={item.product_name} class="item-image" />
                   <div className="item-info">
                     <h2 className="item-name">{item.product_name}</h2>
-                    <p className="item-description">Color: {item.color}</p>
-                    <p className="item-description">Size: {item.size}</p>
+                    {/* <p className="item-description">Color: {item.color}</p>
+                    <p className="item-description">Size: {item.size}</p> */}
                   </div>
                 </div>
                 <div className="item-price">
-                  <p className="price">${item.price.toFixed(2)}</p>
+                  <p className="price">{item.price}</p>
                   <div className="quantity-controls">
-                    <button className="quantity-btn">-</button>
+                    <button className="quantity-btn" onClick={() => item.quantity > 1 && updateCart(item.id, item.quantity - 1)}
+                  >-</button>
                     <span className="quantity">{item.quantity}</span>
-                    <button className="quantity-btn">+</button>
+                    <button className="quantity-btn" onClick={() => updateCart(item.id, item.quantity + 1)}>+</button>
                   </div>
                 </div>
-                <p className="total-price">${(item.price * item.quantity).toFixed(2)}</p>
+                <p className="total-price">{item.price * item.quantity}</p>
+                <button className="remove-btn" onClick={() => removeFromCart(item.id)}>❌ Remove</button>
+              
               </div>
             ))}
             {/* Item 1 */}
@@ -87,6 +112,7 @@ const Cart = () => {
               </div>
               <p className="total-price">$30.50</p>
             </div> */}
+           
           </div>
         </div>
 
@@ -94,11 +120,12 @@ const Cart = () => {
         <div className="summary-section">
           <div className="summary-box">
             <div className="summary-details">
-              <p className="summary-item"><span>Cart Subtotal</span> <span>$71.50</span></p>
-              <p className="summary-item"><span>Design by Fluttertop</span> <span>Free</span></p>
-              <p className="summary-item"><span>Discount</span> <span>-$4.00</span></p>
+              <p className="summary-item"><span>Cart Subtotal</span> <span>
+    ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)}
+  </span></p>
+              <p className="summary-item"><span>Discount</span> <span>-${cartItems.reduce((total, item) => total + item.price * item.quantity*0.3, 0).toFixed(2)}</span></p>
               <hr />
-              <p className="summary-total"><span>Cart Total</span> <span>$67.50</span></p>
+              <p className="summary-total"><span>Cart Total</span> <span>${cartItems.reduce((total, item) => total + item.price * item.quantity*0.7, 0).toFixed(2)}</span></p>
               <button className="apply-btn">Apply</button>
             </div>
           </div>

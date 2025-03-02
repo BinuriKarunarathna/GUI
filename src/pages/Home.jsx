@@ -7,6 +7,9 @@ import back2 from "../assets/Background2.jpg";
 import cricket from "../assets/cricket_card.avif";
 import football from "../assets/football_card.avif";
 import badminton from "../assets/badminton_card.webp";
+import racket from "../assets/racket1.jpeg";
+import shuttlecock from "../assets/shuttlecock.jpg";
+import shoes from "../assets/shoes.jpeg";
 
 import "../styles/Home.css";
 
@@ -41,6 +44,27 @@ const Home = () => {
         "leading brands",
       ],
       buttonLink: "/Brands",
+    },
+  ];
+
+  const discounts = [
+    {
+      name: "Yonex Racket",
+      oldPrice: "$100",
+      newPrice: "$80",
+      image: racket,
+    },
+    {
+      name: "Shuttlecock Pack",
+      oldPrice: "$20",
+      newPrice: "$15",
+      image: shuttlecock,
+    },
+    {
+      name: "Badminton Shoes",
+      oldPrice: "$120",
+      newPrice: "$90",
+      image: shoes,
     },
   ];
   const [index, setIndex] = useState(0);
@@ -79,19 +103,45 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div>
+        <div style={{ backgroundColor: "#FFFFF0" }}>
           <h1
             style={{
               fontSize: "80px",
-              backgroundColor: "olive",
-              color: "white",
+              backgroundImage: "linear-gradient(to right, red, #900C3F)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
               textAlign: "center",
               marginTop: "0px",
+              fontWeight: "bold",
             }}
           >
             Are You Interested in Sporty items?
           </h1>
         </div>
+        <section className="discount-section">
+          <div className="discount-banner">
+            <h2>🔥 Limited Time Discounts! 🔥</h2>
+            <p>
+              Get up to <span>30% OFF</span> on your favorite badminton gear!
+            </p>
+          </div>
+
+          <div className="discount-grid">
+            {discounts.map((item, index) => (
+              <div key={index} className="discount-card">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="discount-image"
+                />
+                <h3>{item.name}</h3>
+                <p className="old-price">{item.oldPrice}</p>
+                <p className="new-price">{item.newPrice}</p>
+                <button className="shop-button">Shop Now</button>
+              </div>
+            ))}
+          </div>
+        </section>
         <section className="product-categories">
           <h2 className="section-title">PRODUCT CATEGORIES</h2>
           <div className="categories-container">
@@ -107,7 +157,7 @@ const Home = () => {
 
             <div className="category-card">
               <img
-              src={football}
+                src={football}
                 alt="Punching Range"
                 className="category-image"
               />

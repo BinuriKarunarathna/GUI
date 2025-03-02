@@ -6,27 +6,75 @@
     font-weight: bold;    
     height:80px;
     border-bottom:5px lightblue solid;  
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Brand on left, menu on right */
+    padding: 0 40px;
 }
+.BrandName
+{
+    color:red;
+    text-decoration: none;
+    padding-left: 50px;
+    font-size: 50px;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+.navbar-right {
+    display: flex;
+}
+
 .navbar li
 {
     display: inline-block;
-    padding-top: 25px;
+    padding-right: 40px;
     position :relative;
+    
+    
 }
+/* .navItem  
+{
+
+    /* margin-left: 150px; */
+
+
 .navbar li .navItem{
     color: #ffffff;
     text-decoration: none;
-    padding-left: 150px;
+    padding-right: 0px;  
+    padding-left: 0px;  
+}
+.navItem::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjusts the underline position */
+    width: 56px;
+    height: 2px;
+    background-color: red; /* Red underline */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navItem:hover::after {
+    transform: scaleX(1); /* Expands underline on hover */
 }
 .dropdown-content   {
     display: none;
-    position: absolute; /* Change to absolute to position it relative to the parent */
-    background-color:gray;
-    margin-left: 70px;
+    position: absolute; 
+    background-color:rgb(11, 11, 11);
+    margin-left: -60px;
     z-index: 1;
 }
 .navbar li:hover .dropdown-content {
     display: block;
+    /* justify-content: ; */
     /* color:red; */
 }
 .dropdown-content li {
@@ -38,7 +86,7 @@
     text-decoration: none;
 }
 .dropdown-content li:hover > .subItem {
-    color:orange;
+    color:red;
 }
   /* .dropdown-content a {
     color: black;

@@ -17,7 +17,7 @@ const Brands = () => {
                 <div class="category-card" >
                     <div id="adidas"></div>
                     <div class="category-title">Impossible Is Nothing
-                    Step into the world of performance and style with Adidas. From groundbreaking sports gear to fashion-forward designs, Adidas combines innovation with comfort to help you conquer every challenge. Embrace the stripes and redefine your limits!</div>
+                    Step into the world of style with Adidas. From groundbreaking sports gear to fashion-forward designs, Adidas combines innovation with comfort to help you conquer every challenge. Embrace the stripes and redefine your limits!</div>
                 </div>
                 <div class="category-card" >
                     <div id="puma"></div>

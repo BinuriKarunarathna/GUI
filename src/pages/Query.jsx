@@ -1,119 +1,382 @@
+// import React, { useState } from "react";
+// import NavBar from "../components/NavBar";
+// import Footer from "../components/Footer";
+// import contactImage from "../assets/query.jpg";
+// import "../styles/Query.css";
+
+// const FeedbackForm = () => {
+//   // State for form data
+//   const [formData, setFormData] = useState({
+//     full_name: "",
+//     phone_number: "",
+//     email_address: "",
+//     satisfaction_rating: "",
+//     feedback_reason: "",
+//     preferred_task_method: "select",
+//   });
+
+//   // Handle form input changes
+//   const handleChange = (event) => {
+//     const { name, value } = event.target;
+//     setFormData({ ...formData, [name]: value });
+//   };
+
+//   // Handle form submission
+//   const handleSubmit = async (event) => {
+//     event.preventDefault();
+
+//     console.log("Form Data:", formData);
+
+//     try {
+//       const response = await fetch("http://localhost:5000/submit-feedback", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(formData),
+//       });
+
+//       if (response.ok) {
+//         alert("Feedback submitted successfully!");
+//       } else {
+//         alert("Error submitting feedback");
+//       }
+//     } catch (error) {
+//       console.error("Error:", error);
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <NavBar />
+//       <div className="contact-image-container">
+//         <img src={contactImage} alt="Contact Us" className="contact-image" />
+//         <h1 className="contact-heading">CONTACT US</h1>
+//       </div>
+
+//       <div className="query-container">
+//         <form className="form" onSubmit={handleSubmit}>
+//           {/* Full Name */}
+//           <label htmlFor="fullName">Full Name:</label><br /><br />
+//           <input
+//             type="text"
+//             id="fullName"
+//             name="full_name"
+//             value={formData.full_name}
+//             onChange={handleChange}
+//             autoComplete="off"
+//           />
+//           <br /><br />
+
+//           {/* Phone Number */}
+//           <label htmlFor="number">Phone Number:</label><br /> <br />
+//           <input
+//             type="text"
+//             id="number"
+//             name="phone_number"
+//             value={formData.phone_number}
+//             onChange={handleChange}
+//             autoComplete="off"
+//           />
+//           <br /><br />
+
+//           {/* Email Address */}
+//           <label htmlFor="email">Email Address:</label><br /><br />
+//           <input
+//             type="text"
+//             id="email"
+//             name="email_address"
+//             value={formData.email_address}
+//             onChange={handleChange}
+//             autoComplete="off"
+//           />
+//           <br /><br />
+
+//           {/* Satisfaction Rating */}
+//           <p>
+//             How satisfied were you with our website today? Choose from 1 to 5.
+//             Where 1 is extremely dissatisfied and 5 is extremely satisfied.
+//           </p><br /><br />
+//           {[1, 2, 3, 4, 5].map((num) => (
+//             <label key={num}>
+//               <input
+//                 type="radio"
+//                 name="satisfaction_rating"
+//                 value={num}
+//                 checked={formData.satisfaction_rating === String(num)}
+//                 onChange={handleChange}
+//               />
+//               {num}
+//             </label>
+//           ))}
+//           <br /><br />
+
+//           {/* Feedback Reason */}
+//           <label htmlFor="details">
+//             Please could you tell us your reasons for giving this rating:
+//           </label><br /><br />
+//           <textarea
+//             id="details"
+//             name="feedback_reason"
+//             value={formData.feedback_reason}
+//             onChange={handleChange}
+//           ></textarea>
+//           <br /><br />
+
+//           {/* Preferred Task Method */}
+//           <label htmlFor="method2">
+//             If you had to complete this task again, how would you prefer to do
+//             it? (optional):
+//           </label><br /><br />
+//           <select
+//             id="method2"
+//             name="preferred_task_method"
+//             value={formData.preferred_task_method}
+//             onChange={handleChange}
+//           >
+//             <option value="select">--Please Select--</option>
+//             <option value="phone">Phone</option>
+//             <option value="website">Website</option>
+//             <option value="webchat">Webchat</option>
+//             <option value="socialMedia">Social Media</option>
+//             <option value="email">Email</option>
+//           </select>
+//           <br /><br />
+
+//           {/* Submit Button */}
+//           <input type="submit" value="Send" />
+//         </form>
+//       </div>
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default FeedbackForm;
+
 import React, { useState } from "react";
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import '../styles/Query.css'
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import contactImage from "../assets/query.jpg";
+import "../styles/Query.css";
 
 const FeedbackForm = () => {
-  const [method, setMethod] = useState("");
-  const [method2, setMethod2] = useState("");
+  // State for form data
+  const [formData, setFormData] = useState({
+    full_name: "",
+    phone_number: "",
+    email_address: "",
+    satisfaction_rating: "",
+    feedback_reason: "",
+    preferred_task_method: "select",
+  });
 
-  const handleMethodChange = (event) => {
-    setMethod(event.target.value);
+  // State for error messages
+  const [errors, setErrors] = useState({});
+
+  // Handle form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+
+    // Remove error message as user types
+    setErrors({ ...errors, [name]: "" });
   };
 
-  const handleMethod2Change = (event) => {
-    setMethod2(event.target.value);
+  // Validate input fields
+  const validateForm = () => {
+    let newErrors = {};
+
+    // Full Name Validation
+    if (!formData.full_name.trim()) {
+      newErrors.full_name = "Full Name is required.";
+    } else if (!/^[A-Za-z\s]+$/.test(formData.full_name)) {
+      newErrors.full_name = "Full Name should contain only letters and spaces.";
+    } else if (formData.full_name.length < 3) {
+      newErrors.full_name = "Full Name must be at least 3 characters.";
+    }
+
+    // Phone Number Validation (10-digit)
+    if (!formData.phone_number.trim()) {
+      newErrors.phone_number = "Phone Number is required.";
+    } else if (!/^\d{10}$/.test(formData.phone_number)) {
+      newErrors.phone_number = "Enter a valid 10-digit phone number.";
+    }
+
+    // Email Address Validation
+    if (!formData.email_address.trim()) {
+      newErrors.email_address = "Email Address is required.";
+    } else if (
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(
+        formData.email_address
+      )
+    ) {
+      newErrors.email_address = "Enter a valid email address.";
+    }
+
+    // Satisfaction Rating Validation
+    if (!formData.satisfaction_rating) {
+      newErrors.satisfaction_rating = "Please select a satisfaction rating.";
+    }
+
+    // Feedback Reason Validation
+    if (!formData.feedback_reason.trim()) {
+      newErrors.feedback_reason = "Feedback is required.";
+    } else if (formData.feedback_reason.length < 10) {
+      newErrors.feedback_reason = "Feedback must be at least 10 characters.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
-  // Inline styles for the form
-  // const formContainerStyle = {
-  //   paddingTop: '30px',
-  //   paddingLeft: '20px',
-  //   backgroundImage: 'url("../assets/backgroundTile.jpg")',
-  //   marginLeft: '400px',
-  //   marginRight: '410px',
-  //   marginTop: '110px',
-  //   borderRadius: '20px',
-  //   height: '1100px',
-  //   borderStyle: 'solid',
-  //   borderColor: 'lightblue',
-  //   fontSize: '20px',
-  // };
+  // Handle form submission
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  // const inputStyle = {
-  //   height: '40px',
-  //   width: '600px',
-  //   fontSize: '18px',
-  // };
+    if (!validateForm()) {
+      return; // Stop submission if validation fails
+    }
 
-  // const submitButtonStyle = {
-  //   backgroundColor: 'black',
-  //   color: 'white',
-  //   padding: '12px 20px',
-  //   border: 'none',
-  //   borderRadius: '4px',
-  //   cursor: 'pointer',
-  //   textAlign: 'center',
-  //   fontSize: '18px',
-  //   width: '100px',
-  // };
+    console.log("Form Data:", formData);
 
-  // const errorStyle = {
-  //   color: 'white',
-  //   backgroundColor: 'red',
-  // };
+    try {
+      const response = await fetch("http://localhost:5000/submit-feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-  // const thankYouMessageStyle = {
-  //   display: 'none',
-  //   textAlign: 'center',
-  //   backgroundImage: 'url("../assets/backgroundTile.jpg")',
-  // };
+      if (response.ok) {
+        alert("Feedback submitted successfully!");
+        setFormData({
+          full_name: "",
+          phone_number: "",
+          email_address: "",
+          satisfaction_rating: "",
+          feedback_reason: "",
+          preferred_task_method: "select",
+        });
+      } else {
+        alert("Error submitting feedback");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
   return (
     <div>
-        <NavBar/>
-    <div className="query-container">        
-      <form className="form" id="Form" method="post" action="mailto:binuri.20221514@iit.ac.lk">
-        <label htmlFor="fullName">Full Name:</label>
-        <br /><br />
-        <input type="text" name="full name" id="fullName" autocomplete="off"  />
-        <br /><span id="invalidName" className="error" ></span><br /><br />
-        
-        <label htmlFor="number">Phone Number:</label>
-        <br /><br />
-        <input type="text" name="phone number" id="number" autocomplete="off"  />
-        <br /><span id="invalidNumber" className="error" ></span><br /><br />
-        
-        <label htmlFor="email">Email Address:</label>
-        <br /><br />
-        <input type="text" name="Email" id="email" autocomplete="off"  />
-        <br /><span id="invalidEmail" className="error"></span><br />
-        <br />
-        
-        <p>How satisfied were you with our website today? Choose from 0 to 5. Where 0 is extremely dissatisfied and 5 is extremely satisfied.</p>
-        <input type="radio" id="num1" name="rating" />
-        <label htmlFor="num1">1</label>
-        <input type="radio" id="num2" name="rating" />
-        <label htmlFor="num2">2</label>
-        <input type="radio" id="num3" name="rating" />
-        <label htmlFor="num3">3</label>
-        <input type="radio" id="num4" name="rating" />
-        <label htmlFor="num4">4</label>
-        <input type="radio" id="num5" name="rating" />
-        <label htmlFor="num5">5</label>
-        <br /><span id="invalidRadio" className="error" ></span><br /><br />
-        
-        <label htmlFor="details">Please could you tell us your reasons for giving this rating:</label><br /><br />
-        <textarea id="details" name="Details" ></textarea>
-        <br /><span id="invalidDetails" className="error" ></span><br /><br />
+      <NavBar />
+      <div className="contact-image-container">
+        <img src={contactImage} alt="Contact Us" className="contact-image" />
+        <h1 className="contact-heading">CONTACT US</h1>
+      </div>
 
-        <label htmlFor="method2">If you had to complete this task again, how would you prefer to do it? (optional):</label><br /><br />
-        <select name="Method2" id="method2"  value={method2} onChange={handleMethod2Change}>
-          <option value="select">--Please Select--</option>
-          <option value="phone">Phone</option>
-          <option value="website">Website</option>
-          <option value="webchat">Webchat</option>
-          <option value="socialMedia">Social Media</option>
-          <option value="email">Email</option>
-        </select>  <br/><br /><br/>     
-        <input type="submit" value="Send"  />
-        <br />
-      </form>
-    </div><br />
-    <Footer/>
+      <div className="query-container">
+        <form className="form" onSubmit={handleSubmit}>
+          {/* Full Name */}
+          <label htmlFor="fullName">Full Name:</label> <br /><br />
+          <input
+            type="text"
+            id="fullName"
+            name="full_name"
+            value={formData.full_name}
+            onChange={handleChange}
+            autoComplete="off"
+          /> <br />
+          {errors.full_name && <span className="error">{errors.full_name}</span>}
+          
+          <br /><br />
+          {/* Phone Number */}
+          <label htmlFor="number">Phone Number:</label> <br /><br />
+          <input
+            type="text"
+            id="number"
+            name="phone_number"
+            value={formData.phone_number}
+            onChange={handleChange}
+            autoComplete="off"
+          /><br />
+          {errors.phone_number && (
+            <span className="error">{errors.phone_number}</span>
+          )}
+          <br /><br />
+
+          {/* Email Address */}
+          <label htmlFor="email">Email Address:</label> <br /><br />
+          <input
+            type="text"
+            id="email"
+            name="email_address"
+            value={formData.email_address}
+            onChange={handleChange}
+            autoComplete="off"
+          /><br />
+          {errors.email_address && (
+            <span className="error">{errors.email_address}</span>
+          )}
+           <br /><br />
+
+          {/* Satisfaction Rating */}
+          <p>How satisfied were you with our website today?</p> <br /><br />
+          {[1, 2, 3, 4, 5].map((num) => (
+            <label key={num}>
+              <input
+                type="radio"
+                name="satisfaction_rating"
+                value={num}
+                checked={formData.satisfaction_rating === String(num)}
+                onChange={handleChange}
+              />
+              {num}
+            </label>
+          ))}<br />
+          {errors.satisfaction_rating && (
+            <span className="error">{errors.satisfaction_rating}</span>
+          )}
+           <br /><br />
+
+          {/* Feedback Reason */}
+          <label htmlFor="details">
+            Please provide your reasons for giving this rating:
+          </label> <br /><br />
+          <textarea
+            id="details"
+            name="feedback_reason"
+            value={formData.feedback_reason}
+            onChange={handleChange}
+          ></textarea><br />
+          {errors.feedback_reason && (
+            <span className="error">{errors.feedback_reason}</span>
+          )}
+           <br /><br />
+
+          {/* Preferred Task Method */}
+          <label htmlFor="method2">
+            If you had to complete this task again, how would you prefer to do it?
+          </label> <br /><br />
+          <select
+            id="method2"
+            name="preferred_task_method"
+            value={formData.preferred_task_method}
+            onChange={handleChange}
+          >
+            <option value="select">--Please Select--</option>
+            <option value="phone">Phone</option>
+            <option value="website">Website</option>
+            <option value="webchat">Webchat</option>
+            <option value="socialMedia">Social Media</option>
+            <option value="email">Email</option>
+          </select>
+          <br /><br />
+
+          {/* Submit Button */}
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+
+      <Footer />
     </div>
   );
 };
 
 export default FeedbackForm;
-//mongodb+srv://Yasara:<db_password>@atlascluster.pr425nk.mongodb.net/

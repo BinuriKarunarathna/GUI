@@ -9,18 +9,9 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import axios from "axios";
 function Cricket() {
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
+  const [items, setItems] = useState([]);
 
-  let items = [
-    { id: 1, name: 'FootBall Ball', price: 50, image: football},
-    { id: 2, name: 'FootBall Boot', price: 15, image: boot },
-    { id: 3, name: 'Shin Guards', price: 75, image: guards },
-    { id: 4, name: 'GoalKeeper Gloves', price: 10, image: gloves },
-  ];
-  const setData = (data) => {
-    items = data;
-    console.log(data);
-  }
   useEffect(() => {
     const endpoint = "http://localhost:5000/items?type_of_sport=Football";
     console.log("Fetching data from: ", endpoint);
@@ -28,7 +19,7 @@ function Cricket() {
       .get(endpoint)
       .then((response) => {
         console.log("network response", response);
-        setData(response.data); // Update state with fetched data
+        setItems(response.data); // Update state with fetched data
         // setLoading(false);
       })
       .catch((error) => {
@@ -37,8 +28,21 @@ function Cricket() {
         // setLoading(false);
       });
   }, []);
-  const addToCart = (item) => {
-    setCart([...cart, item]);
+  const addToCart = async (item) => {
+    try {
+      const response = await axios.post("http://localhost:5000/cart", {
+        product_name: item.name,
+        price: item.price,
+        quantity: 1, // Default to 1, update later if needed
+        image_url: item.image_url,
+      });
+
+      console.log("Item added to cart:", response.data);
+      alert(`${item.name} added to cart!`);
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+      alert("Failed to add item to cart.");
+    }
   };
 
   return (
@@ -46,7 +50,7 @@ function Cricket() {
     <NavBar/>
     <div className="App">
       <header className="hero3">
-        <h1>Badminton Equipment Store</h1>
+        <h1>Football Equipment Store</h1>
         <p>Gear Up for Victory!</p>
         <button className="cta-button">Shop Now</button>
       </header>
@@ -55,7 +59,7 @@ function Cricket() {
         <section className="items">
           {items.map((item) => (
             <div key={item.id} className="item-card">
-              <img src={item.image} alt={item.name} className="item-image" />
+              <img src={item.image_url} alt={item.name} className="item-image" />
               <h2>{item.name}</h2>
               <p>Price: ${item.price}</p>
               <button onClick={() => addToCart(item)}>Add to Cart</button>
