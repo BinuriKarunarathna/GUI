@@ -1,5 +1,9 @@
 import React from 'react'
 import './NavBar.css'
+// import youtube from '../assets/youtube.png';
+// // import facebook from 'E:/University of Ruhuna/3rd Sem/GUI Programming/GUI/sports-gear/public/facebook.png';
+// import instagram from '../assets/instagram.png';
+// import twitter from '../assets/twitter.png';
 const Footer = () => {
   return (
     <div>
@@ -46,16 +50,30 @@ const Footer = () => {
                         <li><a href="#e">Notifications</a></li>
                     </ul>
                 </div>
+                </div>
                 <div class="footer-column">
                     <h3>Social Media</h3>
-                    <ul>
-                        <li><a href="#e">Facebook</a></li>
-                        <li><a href="#e">Instagram</a></li>
-                        <li><a href="#e">YouTube</a></li>
-                        <li><a href="#e">Twitter</a></li>
-                    </ul>
+                    {/* <img src="/facebook.png" alt="Facebook" width="2" height="2" />
+                    <img src="/instagram.png" alt="Instagram" width="2" height="2" />
+                    <img src="/youtube.png" alt="YouTube" width="2" height="2" />
+                    <img src="/twitter.png" alt="Twitter" width="2" height="2" />
+                     */}
+                    
+                    {/* <a href="https://www.facebook.com" >
+                  <img src={facebook} alt="Facebook" width={20} height={20}/>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <img src={instagram} alt="Instagram" />
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                  <img src={youtube} alt="YouTube" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                  <img src={twitter} alt="Twitter" />
+                </a>
+                 */}
                 </div>
-            </div>
+            
         </div>
          {/* Privacy and Sitemap  */}
         <div class="footer-bottom">

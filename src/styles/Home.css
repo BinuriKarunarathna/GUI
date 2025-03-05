@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 
@@ -211,7 +212,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   display: block;
-  margin-top: 0px;
+  margin-top:20px;
 }
 
 .view-range:hover {
@@ -229,33 +230,49 @@ body {
   width: 500px;
   display: flex;
   flex-direction: column;
-  height: 500px; /* Ensures full card height */
+  height: 500px; /* Remove the fixed height to allow flexibility */
   border-radius: 10px;
   overflow: hidden;
-  margin: 0; /* Ensures no unwanted gaps */
+  margin: 10px; /* Add some spacing between the cards */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow to the card */
 }
 
 .category-image {
   width: 100%;
-  height: 100%;
-  flex-grow: 1; /* Ensures the image fills available space */
-  object-fit: cover; /* Ensures the image fills space without distortion */
-  display: block; /* Prevents spacing issues */
+  height: 400px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensures the image fits without distortion */
+  display: block;
 }
 
 .category-content {
   background: #b3d9ff; /* Light blue background */
-  padding: 50px;
+  padding: 20px; /* Reduced padding for better content spacing */
   text-align: center;
-  flex-shrink: 0; /* Prevents shrinking */
+  flex-grow: 1; /* Ensures the content area grows to fill the remaining space */
 }
 
 .category-footer {
-  background: #3d4b52;
+  background: #3d4b52; /* Dark background */
   color: white;
   padding: 15px;
   text-align: center;
-  flex-shrink: 0; /* Prevents unwanted shrinking */
+  flex-shrink: 0; /* Prevents shrinking */
+  font-weight: bold;
+}
+.category-card:hover {
+  transform: scale(1.05); /* Slightly scales up the card */
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2); /* Increases the shadow effect */
+}
+
+@media (max-width: 768px) {
+  .category-card {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  .category-image {
+    height: 200px; /* Adjust the image height for smaller screens */
+  }
 }
 
 .section-title {

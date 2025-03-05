@@ -4,8 +4,8 @@
   }
   
   .hero1 {
-    background: url('../assets/badminton1.jpeg');
-    background-size: 100% 100%;
+    background: url('../assets/bad.webp') no-repeat  ;
+    background-size: 100% 250%;
     text-align: center;
     color: white;
     padding: 50px 20px;

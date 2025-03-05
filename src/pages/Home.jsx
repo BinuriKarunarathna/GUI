@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import back from "../assets/back.webp";
-import back1 from "../assets/Background.jpeg";
-import back2 from "../assets/Background2.jpg";
+import back1 from "../assets/back1.jpeg";
+import back2 from "../assets/back.webp";
+import back3 from "../assets/Background2.jpg";
 import cricket from "../assets/cricket_card.avif";
 import football from "../assets/football_card.avif";
 import badminton from "../assets/badminton_card.webp";
@@ -11,20 +11,11 @@ import racket from "../assets/racket1.jpeg";
 import shuttlecock from "../assets/shuttlecock.jpg";
 import shoes from "../assets/shoes.jpeg";
 
+
 import "../styles/Home.css";
 
 const Home = () => {
   const slides = [
-    {
-      image: back,
-      text: [
-        "Discover",
-        " the High-Quality ",
-        "equipments from ",
-        "leading brands",
-      ],
-      buttonLink: "/Brands",
-    },
     {
       image: back1,
       text: [
@@ -37,6 +28,16 @@ const Home = () => {
     },
     {
       image: back2,
+      text: [
+        "Discover",
+        " the High-Quality ",
+        "equipments from ",
+        "leading brands",
+      ],
+      buttonLink: "/Brands",
+    },
+    {
+      image: back3,
       text: [
         "Discover",
         " the High-Quality ",
@@ -120,7 +121,7 @@ const Home = () => {
         </div>
         <section className="discount-section">
           <div className="discount-banner">
-            <h2>🔥 Limited Time Discounts! 🔥</h2>
+            <h2> Limited Time Discounts! </h2>
             <p>
               Get up to <span>30% OFF</span> on your favorite badminton gear!
             </p>
@@ -154,7 +155,6 @@ const Home = () => {
                 </a>
               </div>
             </div>
-
             <div className="category-card">
               <img
                 src={football}
