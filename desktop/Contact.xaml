@@ -1,0 +1,71 @@
+﻿<Page x:Class="WpfApplication.Contact"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:WpfApplication.components"
+      Title="Contact Us"
+      Height="600"
+        Width="900"
+      Background="#F8F9FA"
+      FontFamily="Segoe UI"
+      FontSize="16">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:Navbar Grid.Row="0"/>
+         
+        <TextBlock Grid.Row="1" Text="Get in Touch" FontSize="28" FontWeight="Bold" 
+                   Foreground="#333" HorizontalAlignment="Center" Margin="0 0 0 20"/>
+
+        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+             
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                    <Image Source="/shoes.jpeg" Width="40" Height="40" Margin="0 10"/>
+                    <StackPanel>
+                        <TextBlock Text="Our Office" FontWeight="Bold" FontSize="18"/>
+                        <TextBlock Text="123 Street, City, Country" Foreground="Gray"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                    <Image Source="/ball.jpeg" Width="40" Height="40" Margin="0 10"/>
+                    <StackPanel>
+                        <TextBlock Text="Call Us" FontWeight="Bold" FontSize="18"/>
+                        <TextBlock Text="+123 456 7890" Foreground="Gray"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+              
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                    <Image Source="/boot.jpeg" Width="40" Height="40" Margin="0 10"/>
+                    <StackPanel>
+                        <TextBlock Text="Email Us" FontWeight="Bold" FontSize="18"/>
+                        <TextBlock Text="contact@yourcompany.com" Foreground="Gray"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                    <Image Source="/grip.jpeg" Width="40" Height="40" Margin="0 10"/>
+                    <StackPanel>
+                        <TextBlock Text="Follow Us" FontWeight="Bold" FontSize="18"/>
+                        <TextBlock Text="Facebook | Twitter | Instagram" Foreground="Gray"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <local:Footer Grid.Row="3"/>
+    </Grid>
+</Page>

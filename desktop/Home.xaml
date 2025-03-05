@@ -1,0 +1,72 @@
+﻿<Page x:Class="WpfApplication.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication.components"
+      mc:Ignorable="d" 
+      Title="Sports Gear" Height="600" Width="900">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Navbar -->
+            <RowDefinition Height="*"/>
+            <!-- Content (Takes remaining space) -->
+            <RowDefinition Height="Auto"/>
+            <!-- Footer -->
+        </Grid.RowDefinitions>
+        <local:Navbar Grid.Row="0"/>
+        <!-- Content Area with ScrollViewer -->
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,60">
+            <!-- Added margin to prevent overlap -->
+            <StackPanel Orientation="Vertical" Margin="20,10,20,10">
+
+                <!-- Hero Section (Image Slider) -->
+                <Grid Height="300" Margin="0,0,0,20">
+                    <Image Name="SlideImage" Stretch="Fill" Source="Background2.jpg"/>
+                    <TextBlock Name="HeroText" FontSize="24" FontWeight="Bold" Foreground="blue" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                    <!--<Button Content="SHOP NOW" Width="140" Height="45" Background="Olive" 
+                    Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                    Margin="0,0,0,30"/>-->
+                </Grid>
+
+                <!-- Product Categories Title -->
+                <TextBlock Text="PRODUCT CATEGORIES" FontSize="26" FontWeight="Bold" 
+                   Foreground="Black" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+                <!-- Categories Section -->
+                <WrapPanel HorizontalAlignment="Center" Margin="0,10,0,20">
+                    <!-- Badminton Category -->
+                    <StackPanel Width="220" Margin="15">
+                        <Image Source="/badminton1.jpeg" Height="160"/>
+                        <TextBlock Text="BADMINTON" FontSize="18" FontWeight="Bold" 
+                           HorizontalAlignment="Center" Margin="0,10,0,5"/>
+                        <Button Content="View Range" Click="Button_Click" Background="Olive" Foreground="White" Width="120" Height="35"/>
+                    </StackPanel>
+
+                    <!-- Football Category -->
+                    <StackPanel Width="220" Margin="15">
+                        <Image Source="/football2.jpeg" Height="140"/>
+                        <TextBlock Text="FOOTBALL" FontSize="18" FontWeight="Bold" 
+                           HorizontalAlignment="Center" Margin="0,10,0,5"/>
+                        <Button Content="View Range" Click="Button_Click_1" Background="Olive" Foreground="White" Width="120" Height="35"/>
+                    </StackPanel>
+
+                    <!-- Cricket Category -->
+                    <StackPanel Width="220" Margin="15">
+                        <Image Source="/cricket1.jpeg" Height="140"/>
+                        <TextBlock Text="CRICKET" FontSize="18" FontWeight="Bold" 
+                           HorizontalAlignment="Center" Margin="0,10,0,5"/>
+
+                        <Button Content="View Range" Click="Button_Click_2" Background="Olive" Foreground="White" Width="120" Height="35"/>
+
+                    </StackPanel>
+                </WrapPanel>
+                <local:Footer/>
+            </StackPanel>
+
+        </ScrollViewer>
+    </Grid>
+</Page>

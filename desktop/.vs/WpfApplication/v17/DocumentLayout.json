@@ -1,0 +1,345 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\football.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:football.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\cricket.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:cricket.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\cricket.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:cricket.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\badminton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:badminton.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\badminton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:badminton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\components\\navbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:components\\navbar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\components\\navbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:components\\navbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\cart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:cart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\cart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:cart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\wpfapplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:wpfapplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\contact.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:contact.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\cartpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:cartpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\components\\footer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:components\\footer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\cartpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:cartpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|e:\\university of ruhuna\\3rd sem\\gui programming\\wpfapplication\\components\\footer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF39690B-D739-4475-93D9-C9C13479FF5E}|WpfApplication.csproj|solutionrelative:components\\footer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Home.xaml",
+              "RelativeDocumentMoniker": "Home.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Home.xaml",
+              "RelativeToolTip": "Home.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T16:01:43.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cricket.xaml.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cricket.xaml.cs",
+              "RelativeDocumentMoniker": "Cricket.xaml.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cricket.xaml.cs",
+              "RelativeToolTip": "Cricket.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwDcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T15:40:40.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Badminton.xaml.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Badminton.xaml.cs",
+              "RelativeDocumentMoniker": "Badminton.xaml.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Badminton.xaml.cs",
+              "RelativeToolTip": "Badminton.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T18:37:25.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Navbar.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Navbar.xaml",
+              "RelativeDocumentMoniker": "components\\Navbar.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Navbar.xaml",
+              "RelativeToolTip": "components\\Navbar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-12T06:57:13.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Navbar.xaml.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Navbar.xaml.cs",
+              "RelativeDocumentMoniker": "components\\Navbar.xaml.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Navbar.xaml.cs",
+              "RelativeToolTip": "components\\Navbar.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAADwvy0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T07:00:43.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAD4vxEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:39:14.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Badminton.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Badminton.xaml",
+              "RelativeDocumentMoniker": "Badminton.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Badminton.xaml",
+              "RelativeToolTip": "Badminton.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T03:09:30.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cricket.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cricket.xaml",
+              "RelativeDocumentMoniker": "Cricket.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cricket.xaml",
+              "RelativeToolTip": "Cricket.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-22T04:14:26.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FootBall.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\FootBall.xaml",
+              "RelativeDocumentMoniker": "FootBall.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\FootBall.xaml",
+              "RelativeToolTip": "FootBall.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-24T05:22:46.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Cart.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cart.xaml",
+              "RelativeDocumentMoniker": "Cart.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cart.xaml",
+              "RelativeToolTip": "Cart.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-19T02:20:37.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\CartItem.cs",
+              "RelativeDocumentMoniker": "CartItem.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\CartItem.cs",
+              "RelativeToolTip": "CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:41:51.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cart.xaml.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cart.xaml.cs",
+              "RelativeDocumentMoniker": "Cart.xaml.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Cart.xaml.cs",
+              "RelativeToolTip": "Cart.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:40:11.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-02T17:12:40.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Contact.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Contact.xaml",
+              "RelativeDocumentMoniker": "Contact.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\Contact.xaml",
+              "RelativeToolTip": "Contact.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-24T06:28:07.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WpfApplication.csproj",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\WpfApplication.csproj",
+              "RelativeDocumentMoniker": "WpfApplication.csproj",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\WpfApplication.csproj",
+              "RelativeToolTip": "WpfApplication.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-19T01:09:30.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-24T06:59:19.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Footer.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Footer.xaml",
+              "RelativeDocumentMoniker": "components\\Footer.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Footer.xaml",
+              "RelativeToolTip": "components\\Footer.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-12T06:59:29.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CartPage.xaml",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\CartPage.xaml",
+              "RelativeDocumentMoniker": "CartPage.xaml",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\CartPage.xaml",
+              "RelativeToolTip": "CartPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-24T14:35:51.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CartPage.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\CartPage.cs",
+              "RelativeDocumentMoniker": "CartPage.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\CartPage.cs",
+              "RelativeToolTip": "CartPage.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAxwGIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:43:33.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Footer.xaml.cs",
+              "DocumentMoniker": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Footer.xaml.cs",
+              "RelativeDocumentMoniker": "components\\Footer.xaml.cs",
+              "ToolTip": "E:\\University of Ruhuna\\3rd Sem\\GUI Programming\\WpfApplication\\components\\Footer.xaml.cs",
+              "RelativeToolTip": "components\\Footer.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T08:16:45.411Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

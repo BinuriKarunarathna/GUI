@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="adidas.png" />
+    <None Remove="assets\bad_back.avif" />
+    <None Remove="assets\cricket_card.avif" />
+    <None Remove="assets\football_card.avif" />
+    <None Remove="Background2.jpg" />
+    <None Remove="badminton.jpeg" />
+    <None Remove="badminton1.jpeg" />
+    <None Remove="bad_back.avif" />
+    <None Remove="ball.jpeg" />
+    <None Remove="bat.jpeg" />
+    <None Remove="boot.jpeg" />
+    <None Remove="cricket1.jpeg" />
+    <None Remove="cricket2.jpeg" />
+    <None Remove="football.jpeg" />
+    <None Remove="football2.jpeg" />
+    <None Remove="gear.jpeg" />
+    <None Remove="gloves.jpeg" />
+    <None Remove="grip.jpeg" />
+    <None Remove="nike.jpeg" />
+    <None Remove="puma.png" />
+    <None Remove="racket1.jpeg" />
+    <None Remove="reebok.png" />
+    <None Remove="shoes.jpeg" />
+    <None Remove="shuttlecock.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="assets\bad_back.avif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\cricket_card.avif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\football_card.avif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.Data" Version="9.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="adidas.png" />
+    <Resource Include="Background2.jpg" />
+    <Resource Include="badminton.jpeg" />
+    <Resource Include="badminton1.jpeg" />
+    <Resource Include="bad_back.avif" />
+    <Resource Include="ball.jpeg" />
+    <Resource Include="bat.jpeg" />
+    <Resource Include="boot.jpeg" />
+    <Resource Include="cricket1.jpeg" />
+    <Resource Include="cricket2.jpeg" />
+    <Resource Include="football.jpeg" />
+    <Resource Include="football2.jpeg" />
+    <Resource Include="gear.jpeg" />
+    <Resource Include="gloves.jpeg" />
+    <Resource Include="grip.jpeg" />
+    <Resource Include="nike.jpeg" />
+    <Resource Include="puma.png" />
+    <Resource Include="racket1.jpeg" />
+    <Resource Include="reebok.png" />
+    <Resource Include="shoes.jpeg" />
+    <Resource Include="shuttlecock.jpg" />
+  </ItemGroup>
+
+</Project>

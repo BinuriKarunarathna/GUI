@@ -1,0 +1,86 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication.components"
+        mc:Ignorable="d"
+        Title="Sports Gear" Height="600" Width="900">
+
+    <!--<Window.Resources>
+        <Storyboard x:Key="SlideShowStoryboard" RepeatBehavior="Forever" AutoReverse="True">
+            <DoubleAnimation Storyboard.TargetName="SlideImage" 
+                             Storyboard.TargetProperty="Opacity" 
+                             From="0" To="1" Duration="0:0:3" />
+        </Storyboard>
+    </Window.Resources>-->
+
+    <Grid>
+        <!-- Define Rows for Layout -->
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            --><!-- Navbar --><!--
+            <RowDefinition Height="*"/>
+            --><!-- Content (Takes remaining space) --><!--
+            <RowDefinition Height="Auto"/>
+            --><!-- Footer --><!--
+        </Grid.RowDefinitions>
+
+        --><!-- Navbar --><!--
+        <local:Navbar Grid.Row="0"/>-->
+        <Frame Name="MainFrame1"  Margin="0,0,0,0" />
+
+        <!-- Content Area with ScrollViewer --><!--
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,60">
+            --><!-- Added margin to prevent overlap --><!--
+            <StackPanel Orientation="Vertical" Margin="20,10,20,10">
+
+                --><!-- Hero Section (Image Slider) --><!--
+                <Grid Height="300" Margin="0,0,0,20">
+                    <Image Name="SlideImage" Stretch="Fill" Source="Background2.jpg"/>
+                    <TextBlock Name="HeroText" FontSize="24" FontWeight="Bold" Foreground="blue" 
+                               HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                    <Button Content="SHOP NOW" Width="140" Height="45" Background="Olive" 
+                            Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                            Margin="0,0,0,30"/>
+                </Grid>
+
+                --><!-- Product Categories Title --><!--
+                <TextBlock Text="PRODUCT CATEGORIES" FontSize="26" FontWeight="Bold" 
+                           Foreground="Black" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+                --><!-- Categories Section --><!--
+                <WrapPanel HorizontalAlignment="Center" Margin="0,10,0,20">
+                    --><!-- Cricket Category --><!--
+                    <StackPanel Width="220" Margin="15">
+                        <Image Source="/badminton.jpeg" Height="160"/>
+                        <TextBlock Text="CRICKET" FontSize="18" FontWeight="Bold" 
+                                   HorizontalAlignment="Center" Margin="0,10,0,5"/>
+                        <Button Content="View Range" Background="Olive" Foreground="White" Width="120" Height="35"/>
+                    </StackPanel>
+
+                    --><!-- Football Category --><!--
+                    <StackPanel Width="220" Margin="15">
+                        <Image Source="/football2.jpeg" Height="160"/>
+                        <TextBlock Text="FOOTBALL" FontSize="18" FontWeight="Bold" 
+                                   HorizontalAlignment="Center" Margin="0,10,0,5"/>
+                        <Button Content="View Range" Background="Olive" Foreground="White" Width="120" Height="35"/>
+                    </StackPanel>
+
+                    --><!-- Badminton Category --><!--
+                    <StackPanel Width="220" Margin="15">
+                        <Image Source="/Background2.jpg" Height="160"/>
+                        <TextBlock Text="BADMINTON" FontSize="18" FontWeight="Bold" 
+                                   HorizontalAlignment="Center" Margin="0,10,0,5"/>
+
+                        <Button Content="View Range" Background="Olive" Foreground="White" Width="120" Height="35"/>
+
+                    </StackPanel>
+                </WrapPanel>
+                <local:Footer/>
+             </StackPanel>
+            
+        </ScrollViewer>-->
+       
+    </Grid>
+</Window>
